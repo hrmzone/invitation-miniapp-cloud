@@ -58,16 +58,16 @@
         <view class="form-ipt">
           <radio-group class="radio-group" name="plan">
             <label class="radio">
-              <radio class='ws-checkbox' value="学前教育" checked="checked" />学前教育
+              <radio class='ws-checkbox' value="建设工程管理" checked="checked" />建设工程管理
             </label>
             <label class="radio">
-              <radio class='ws-checkbox' value="电子商务" checked="" />电子商务
+              <radio class='ws-checkbox' value="建筑工程技术" checked="" />建筑工程技术
             </label>
             <label class="radio">
-              <radio class='ws-checkbox' value="轨道交通" checked="" />轨道交通
+              <radio class='ws-checkbox' value="建筑设计" checked="" />建筑设计
             </label>
             <label class="radio">
-              <radio class='ws-checkbox' value="汽修" checked="" />汽修
+              <radio class='ws-checkbox' value="其他专业" checked="" />其他专业
             </label>
           </radio-group>
         </view>
@@ -75,7 +75,7 @@
       <view class='form-label'>
         <view class='form-tit'>其他专业</view>
         <view class="form-ipt">
-          <textarea class='textarea' name="extra" placeholder="请填写您意向的专业..." fixed="true" />
+          <textarea class='textarea' name="extra" placeholder="请填写您意向的专业...如有疑问，请联系张老师：13933885316" fixed="true" />
         </view>
       </view>
       <button type="primary" class="send_btn" form-type="submit" wx:if="{{auth}}">确定提交</button>

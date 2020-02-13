@@ -14,6 +14,7 @@
 	"libVersion": "2.10.1",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -51,13 +52,6 @@
 					"id": -1,
 					"name": "pages/map/index",
 					"pathName": "pages/map/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/bless/index",
-					"pathName": "pages/bless/index",
 					"query": "",
 					"scene": null
 				},
