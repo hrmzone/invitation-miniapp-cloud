@@ -1,6 +1,6 @@
 <view class="container">
   <view class="swiper">
-    <swiper indicator-dots="false" autoplay="false" interval="5000">
+    <swiper indicator-dots="false" autoplay="false" interval="8000">
       <swiper-item wx:for="{{slideList}}" wx:key="slide" wx:id="id" wx:if="{{item.image}}">
         <image src="{{item.image}}" class="slide-image" mode="aspectFit" bindtap='previewImage' />
       </swiper-item>

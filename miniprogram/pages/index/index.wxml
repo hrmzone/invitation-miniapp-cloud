@@ -15,7 +15,7 @@
 </view>
 <view class="container">
   <!-- <image src='/images/inv.png' class='inv'></image> -->
-  <image src='{{mainInfo.cover}}' class='cover' mode='aspectFill'></image>
+  <image src='{{mainInfo.cover}}' class='cover' mode='aspectFit'></image>
   <!-- <view class='datetime' animation="{{animationData}}">
     <view class='box'>
       <view class="name css13610f7ae66601">
