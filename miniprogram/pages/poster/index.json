@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "邀请函海报",
+    "usingComponents": {
+        "canvasdrawer": "/utils/canvasdrawer/canvasdrawer"
+    }
+}

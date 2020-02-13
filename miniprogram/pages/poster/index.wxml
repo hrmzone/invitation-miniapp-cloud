@@ -1,0 +1,7 @@
+<view class="poster">
+    <image src="{{shareImage}}" class="share-image"></image>
+    <canvasdrawer painting="{{painting}}" class="canvasdrawer" bind:getImage="eventGetImage" />
+
+    <!-- <button bind:tap="eventDraw">绘制</button> -->
+    <button bindtap='eventSave'>保存到相册</button>
+</view>

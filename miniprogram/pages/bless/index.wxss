@@ -1,0 +1,153 @@
+/* pages/bless/index.wxss */
+
+page {
+  padding-bottom: 250rpx;
+}
+
+.title {
+  text-align: center;
+  font-size: 36rpx;
+  line-height: 60rpx;
+  margin-bottom: 10rpx;
+  color: #666;
+  margin-top: 20rpx;
+}
+
+.friends {
+  min-height: 0;
+  overflow: hidden;
+  width: 700rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 0 25rpx rgba(0, 0, 0, 0.05);
+  margin-bottom: 20rpx;
+}
+
+.face {
+  width: 120rpx;
+  height: 160rpx;
+  float: left;
+  margin: 20rpx 10rpx;
+  text-align: center;
+}
+
+.face .avator {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.face text {
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 24rpx;
+  color: #666;
+  width: 120rpx;
+  margin: 0 auto;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.face image {
+  width: 110rpx;
+  height: 110rpx;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 5rpx;
+  border-radius: 50%;
+}
+
+.btn_zone {
+  padding: 25rpx;
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.zan {
+  width: 340rpx;
+}
+
+.share {
+  width: 340rpx;
+}
+
+.bless_bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 750rpx;
+  min-height: 0;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.bless_img {
+  width: 300rpx;
+  height: 225rpx;
+  margin: 0 auto;
+}
+
+.bless_img image {
+  width: 300rpx;
+  height: 225rpx;
+}
+
+.tips {
+  text-align: center;
+  font-size: 25rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  color: #ccc;
+}
+
+.btn_zone button {
+  border: none;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 36rpx;
+  background-color: none;
+}
+
+.zhufu_btn {
+  background-image: linear-gradient(135deg, #fc679b 0%, #e2175f 100%);
+  box-shadow: 0 20rpx 30rpx -6rpx rgba(234, 47, 91, 0.5);
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+.share_btn {
+  background-image: linear-gradient(135deg, #abdcff 0%, #0396ff 100%);
+  box-shadow: 0 20rpx 30rpx -6rpx rgba(30, 161, 255, 0.5);
+  outline: none;
+  border: none;
+  color: #fff !important;
+}
+
+action-sheet-item, action-sheet-cancel {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 36rpx;
+}
+
+.share-btn {
+  border: none;
+  border-radius: 0;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 36rpx;
+  background-color: #fff;
+}
+
+.share-btn:after {
+  border: none;
+  border-radius: 0;
+}

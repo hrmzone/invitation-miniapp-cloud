@@ -1,0 +1,44 @@
+<!--pages/bless/index.wxml-->
+<view class="container">
+  <view class="bless_img">
+    <image src="/images/heart-animation.gif" />
+  </view>
+  <view class="title" wx:if="{{zanNum == 0}}"> 点击下方按钮打Call </view>
+  <view class="friends">
+    <view class="face" wx:for="{{zanLog}}" wx:key="user">
+      <view class="avator">
+        <image src="{{item.avatarUrl}}" />
+      </view>
+      <text>{{item.nickName}}</text>
+    </view>
+  </view>
+
+  <view class='bless_bar'>
+    <view class="title " wx:if="{{zanNum > 0}}">已收到 {{zanNum}} 位好友送来的赞</view>
+    <view class="btn_zone">
+      <view class="zan fl" wx:if="{{userInfo.length > 0}}">
+        <button type="primary" class='zhufu' bindtap='zan'>打Call</button>
+      </view>
+      <view class="zan fl" wx:else>
+        <button type="primary" class='zhufu_btn' open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">打Call</button>
+      </view>
+      <view class="share fr">
+        <button type="default" class='share_btn' open-type="share">分享喜悦</button>
+      </view>
+
+      <!-- <view class="share fr">
+        这里我选择直接生成海报
+        <button type="default" class='share_btn' bindtap="openActionsheet">分享喜悦</button>
+        <button type="default" class='share_btn' bindtap="createPoster">生成海报</button>
+      </view> -->
+    </view>
+  </view>
+</view>
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet">
+  <action-sheet-item open-type="share">
+    <button open-type="share" class="share-btn">直接传达给好友</button>
+  </action-sheet-item>
+  <action-sheet-item bindtap="createPoster">生成海报</action-sheet-item>
+  <action-sheet-cancel>取消</action-sheet-cancel>
+</action-sheet>

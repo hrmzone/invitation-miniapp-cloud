@@ -1,0 +1,86 @@
+<!--pages/chat/index.wxml-->
+<view class="container">
+
+
+  <view wx:if="{{chatNum > 0}}">
+    <view class="chat_list" wx:for="{{chatList}}" wx:key="user">
+      <view class="chat_face">
+        <image src="{{item.face}}" />
+      </view>
+      <view class="chat_words">
+        <view class="chat_meta">
+          <text class="chat_user">{{item.nickname}} </text>
+          <text class="chat_date fr">{{item.time}}</text>
+        </view>
+        <view>{{item.words}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="befirst">
+      <image src="/images/lovemail.gif" />
+    </view>
+  </view>
+  <view class='btn_area'>
+    <view class='sign_btn' bindtap='signIn'>我要报名</view>
+    <view class='msg_btn' bindtap='leaveMsg'>我要留言</view>
+  </view>
+  <view class="send_msg" wx:if="{{msgSta}}">
+    <image src='/images/green-flower.png' class='msg_top' mode="aspectFit"></image>
+    <form bindreset="foo">
+      <textarea placeholder="在这里输入您要说的话" class="send_ipt" bindinput="bindKeyInput" fixed="true">
+      </textarea>
+      <button type="primary" form-type="reset" class="send_btn" wx:if="{{auth}}">发送留言</button>
+      <button type="primary" form-type="reset" class="send_btn" wx:else open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">发送留言</button>
+      <view class='cancel_msg' bindtap='cancelMsg'>取消</view>
+    </form>
+  </view>
+
+  <view class="send_msg" wx:if="{{signSta}}">
+    <image src='/images/grren-flower-line.png' class='sign_top' mode="aspectFit"></image>
+    <form bindsubmit="formSubmit">
+      <view class='form-label'>
+        <view class='form-tit'>
+          <text class="must">*</text> 姓名</view>
+        <view class="form-ipt">
+          <input type="text" name="name" class='ipt' placeholder="怎么称呼您呢？" />
+        </view>
+      </view>
+      <view class='form-label'>
+        <view class='form-tit'>
+          <text class="must">*</text> 电话</view>
+        <view class="form-ipt">
+          <input type="number" name="tel" class='ipt' placeholder="请填写有效的手机号码" />
+        </view>
+      </view>
+      <view class='form-label'>
+        <view class='form-tit'>选择专业</view>
+        <view class="form-ipt">
+          <radio-group class="radio-group" name="plan">
+            <label class="radio">
+              <radio class='ws-checkbox' value="学前教育" checked="checked" />学前教育
+            </label>
+            <label class="radio">
+              <radio class='ws-checkbox' value="电子商务" checked="" />电子商务
+            </label>
+            <label class="radio">
+              <radio class='ws-checkbox' value="轨道交通" checked="" />轨道交通
+            </label>
+            <label class="radio">
+              <radio class='ws-checkbox' value="汽修" checked="" />汽修
+            </label>
+          </radio-group>
+        </view>
+      </view>
+      <view class='form-label'>
+        <view class='form-tit'>其他专业</view>
+        <view class="form-ipt">
+          <textarea class='textarea' name="extra" placeholder="请填写您意向的专业..." fixed="true" />
+        </view>
+      </view>
+      <button type="primary" class="send_btn" form-type="submit" wx:if="{{auth}}">确定提交</button>
+      <button type="primary" class="send_btn" wx:else open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">确定提交</button>
+      <view class='cancel_msg' bindtap='cancelMsg'>取消</view>
+    </form>
+  </view>
+</view>

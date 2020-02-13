@@ -1,0 +1,4 @@
+<!--pages/dirction.wxml-->
+<view class="container">
+  <map-route route-info="{{routeInfo}}"></map-route>
+</view>

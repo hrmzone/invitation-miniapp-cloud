@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/photos/index",
+    "pages/map/index",
+    "pages/bless/index",
+    "pages/chat/index",
+    "pages/poster/index",
+    "pages/navigation/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "石家庄理工学院",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#ff4c91",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/1-1.png",
+        "selectedIconPath": "images/1-2.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/photos/index",
+        "iconPath": "images/2-1.png",
+        "selectedIconPath": "images/2-2.png",
+        "text": "招生简章"
+      },
+      {
+        "pagePath": "pages/chat/index",
+        "iconPath": "images/5-1.png",
+        "selectedIconPath": "images/5-2.png",
+        "text": "我要报名"
+      },
+      {
+        "pagePath": "pages/map/index",
+        "iconPath": "images/3-1.png",
+        "selectedIconPath": "images/3-2.png",
+        "text": "学校导航"
+      },
+      {
+        "pagePath": "pages/bless/index",
+        "iconPath": "images/4-1.png",
+        "selectedIconPath": "images/4-2.png",
+        "text": "疯狂打Call"
+      }
+    ]
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将被用来导航至学校"
+    }
+  },
+  "plugins": {
+    "myPlugin": {
+      "version": "1.0.7",
+      "provider": "wx5bc2ac602a747594"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}
