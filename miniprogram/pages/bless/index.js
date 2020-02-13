@@ -36,19 +36,31 @@ Page({
       title: '加载中',
       icon: 'loading',
     });
-    const db=wx.cloud.database();
-    db.collection("bless").get().then(
+    wx.cloud.callFunction({
+      name:'star'
+    }).then(
       res=>{
+        console.log(res.result)
         wx.hideLoading();
-        // console.log(res.data)
         that.setData({
-          // mainInfo: res.data.mainInfo,
-          zanLog: res.data,
-          zanNum: res.data.length,
-          // slideList: res.data.slideList
+          zanLog: res.result.data,
+          zanNum: res.result.data.length,
         });
       }
     )
+    // const db=wx.cloud.database();
+    // db.collection("bless").get().then(
+    //   res=>{
+    //     wx.hideLoading();
+    //     // console.log(res.data)
+    //     that.setData({
+    //       // mainInfo: res.data.mainInfo,
+    //       zanLog: res.data,
+    //       zanNum: res.data.length,
+    //       // slideList: res.data.slideList
+    //     });
+    //   }
+    // )
 
     // wx.request({
     //   url: server,
@@ -151,19 +163,31 @@ Page({
       title: '加载中',
       icon: 'loading',
     });
-    const db=wx.cloud.database()
-    db.collection("bless").get().then(
+    wx.cloud.callFunction({
+      name: 'star'
+    }).then(
       res => {
+        console.log(res.result)
         wx.hideLoading();
-        // console.log(res.data)
         this.setData({
-          // mainInfo: res.data.mainInfo,
-          zanLog: res.data,
-          zanNum: res.data.length,
-          // slideList: res.data.slideList
+          zanLog: res.result.data,
+          zanNum: res.result.data.length,
         });
       }
     )
+    // const db=wx.cloud.database()
+    // db.collection("bless").get().then(
+    //   res => {
+    //     wx.hideLoading();
+    //     // console.log(res.data)
+    //     this.setData({
+    //       // mainInfo: res.data.mainInfo,
+    //       zanLog: res.data,
+    //       zanNum: res.data.length,
+    //       // slideList: res.data.slideList
+    //     });
+    //   }
+    // )
   },
 
   /**
@@ -217,18 +241,29 @@ Page({
       ).then(
         res=>{
           console.log("bindgetuserinfo",res)
-          db.collection("bless").get().then(
-            res => {
-              // console.log(res.data)
-              this.setData({
-                // mainInfo: res.data.mainInfo,
-                zanLog: res.data,
-                zanNum: res.data.length,
-                // slideList: res.data.slideList
-              });
-            }
-          )
-        }
+          // db.collection("bless").get().then(
+          //   res => {
+          //     // console.log(res.data)
+          //     this.setData({
+          //       // mainInfo: res.data.mainInfo,
+          //       zanLog: res.data,
+          //       zanNum: res.data.length,
+          //       // slideList: res.data.slideList
+          //     });
+          //   }
+          // )
+        },
+        wx.cloud.callFunction({
+          name: 'star'
+        }).then(
+          res => {
+            console.log(res.result)
+            this.setData({
+              zanLog: res.result.data,
+              zanNum: res.result.data.length,
+            });
+          }
+        )
       )
       // wx.request({
       //   url: server,
@@ -302,19 +337,30 @@ Page({
       }
     }).then(
       res=>{
-        console.log("zan",res)
-        db.collection("bless").get().then(
-          res => {
-            // console.log(res.data)
-            that.setData({
-              // mainInfo: res.data.mainInfo,
-              zanLog: res.data,
-              zanNum: res.data.length,
-              // slideList: res.data.slideList
-            });
-          }
-        )
-      }
+        console.log("zan",res)        
+        // db.collection("bless").get().then(
+        //   res => {
+        //     // console.log(res.data)
+        //     that.setData({
+        //       // mainInfo: res.data.mainInfo,
+        //       zanLog: res.data,
+        //       zanNum: res.data.length,
+        //       // slideList: res.data.slideList
+        //     });
+        //   }
+        // )
+      },
+      wx.cloud.callFunction({
+        name: 'star'
+      }).then(
+        res => {
+          console.log(res.result)
+          this.setData({
+            zanLog: res.result.data,
+            zanNum: res.result.data.length,
+          });
+        }
+      )
     )
     // wx.request({
     //   url: server,
