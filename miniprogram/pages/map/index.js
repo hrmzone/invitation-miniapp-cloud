@@ -25,7 +25,7 @@ Page({
         wx.openLocation({
           latitude: parseFloat(lat),
           longitude: parseFloat(lng),
-          scale: 18,
+          scale: 17,
           name: res.data[0].hotel,
           address: res.data[0].address,
         }, )
