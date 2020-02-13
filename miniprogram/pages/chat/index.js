@@ -33,17 +33,31 @@ Page({
       title: '加载中',
       icon: 'loading',
     });
-    const db=wx.cloud.database();
-    db.collection("comment").get().then(
-      res => {
+
+    wx.cloud.callFunction({
+      name:'comment'
+    }).then(
+      res=>{
+        // console.log(res.result.data, res.result.data.length)
         this.setData({
-          chatList:res.data,
-          chatNum:res.data.length
+          chatList: res.result.data,
+          chatNum: res.result.data.length
         })
-        console.log(res.data)
         wx.hideLoading();
       }
     )
+    // const db=wx.cloud.database();
+    // db.collection("comment").get().then(
+    //   res => {
+    //     this.setData({
+    //       chatList:res.data,
+    //       chatNum:res.data.length
+    //     })
+    //     console.log(res.data)
+    //     wx.hideLoading();
+    //   }
+    // )
+
     // wx.request({
     //   url: server,
     //   method: 'GET',
@@ -91,6 +105,7 @@ Page({
     var userInfo = that.data.userInfo;
     var nickname = userInfo.nickName;
     var face = userInfo.avatarUrl;
+    var openId=userInfo.openId;
 
     var name = event.detail.value.name;
     if (name == '') {
@@ -129,7 +144,7 @@ Page({
         'name': name,
         'tel': tel,
         'plan': plan,
-        'extra': extra
+        'extra': extra,
       }
     }).then(
       res=> {
@@ -140,13 +155,6 @@ Page({
           showCancel: false
         })
         this.cancelMsg()
-      },
-      fail => {
-        wx.showModal({
-          title: '失败',
-          content: '请重新提交',
-          showCancel: false
-        })
       }
     )
 
@@ -242,6 +250,7 @@ Page({
       var name = userInfo.nickName;
       var face = userInfo.avatarUrl;
       var words = that.data.inputValue;
+      var openId= userInfo.openId;
 
       const db=wx.cloud.database();
       db.collection("comment").add({
@@ -250,11 +259,11 @@ Page({
           'appid': appid,
           'nickname': name,
           'face': face,
-          'words': words
+          'words': words,
         }
       }).then(
         res=>{
-          console.log(res.data)
+          console.log(res)
           wx.showModal({
             title: '提示',
             content: '留言成功',
@@ -321,16 +330,29 @@ Page({
       title: '加载中',
       icon: 'loading',
     });
-    const db = wx.cloud.database();
-    db.collection("comment").get().then(
+    wx.cloud.callFunction({
+      name: 'comment'
+    }).then(
       res => {
+        // console.log(res.result.data, res.result.data.length)
         this.setData({
-          chatList: res.data,
-          chatNum: res.data.length
+          chatList: res.result.data,
+          chatNum: res.result.data.length
         })
-        console.log(res.data)
         wx.hideLoading();
       }
     )
+    
+    // const db = wx.cloud.database();
+    // db.collection("comment").get().then(
+    //   res => {
+    //     this.setData({
+    //       chatList: res.data,
+    //       chatNum: res.data.length
+    //     })
+    //     console.log(res.data.length)
+    //     wx.hideLoading();
+    //   }
+    // )
   }
 })
