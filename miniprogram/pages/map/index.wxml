@@ -20,5 +20,5 @@
   </view>
   <!-- <view class='copyright' wx:if="{{mainInfo.she_tel}}">Made With By {{mainInfo.he}} & {{mainInfo.she}}</view> -->
   <view class='copyright' wx:if="{{mainInfo.he_tel}}">人居环境学院 {{mainInfo.he}} 倾情制作</view>
-  <view class='copyright'>©2020 石家庄理工职业学院 版权所有</view>
+  <view class='copyright'>©2020 欢迎报考理工学院 石家庄最美高校</view>
 </view>
