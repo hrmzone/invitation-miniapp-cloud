@@ -1,0 +1,69 @@
+<!--miniprogram/pages/bm/index.wxml-->
+<view wx:if="{{flag>0}}">
+<form bindsubmit="formSubmit" bindreset="formReset">
+<van-cell-group title="*号为必填项目">
+    <van-field
+      name="username"
+      label="姓名"
+      placeholder="请输入用户名"
+      left-icon="user-o"
+      required
+    />
+    <van-field
+      name="phone"
+      label="手机号"
+      type="number"
+      left-icon="phone-o"
+      placeholder="请输入手机号"
+      required
+    />
+    <van-field
+      name="qq"
+      label="QQ号"
+      type="number"
+      placeholder="请输入QQ号"
+      required
+    />
+    <van-field
+      name="school"
+      label="毕业学校"
+      placeholder="您毕业的学校"
+    />
+    <van-field
+      name="subject"
+      label="意向专业"
+      placeholder="感兴趣的意向专业"
+    />
+    <van-field
+      name="msg"
+      label="留言"
+      type="textarea"
+      placeholder="请输入留言"
+      autosize
+    />
+    <button formType="submit" type="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">提交</button>
+    </van-cell-group>
+</form>
+</view>
+<view wx:else>
+<view>
+<van-divider contentPosition="center"><van-tag round type="primary">您已提交成功</van-tag></van-divider>
+<view>
+<view class="img-content">
+<image modo="aspectFull" src="cloud://sjzlgedu-rb4xv.736a-sjzlgedu-rb4xv-1301259260/qr.jpg" />
+</view>
+</view>
+</view>
+<view>
+<van-cell-group title="择校请咨询">
+<van-row>
+  <van-col span="5" offset="1" custom-class="dark">电话</van-col>
+  <van-col span="18" custom-class="light">13933885316</van-col>
+</van-row>
+<van-row>
+  <van-col span="5" offset="1" custom-class="dark">QQ号</van-col>
+  <van-col span="18" custom-class="light">30710311</van-col>
+</van-row>
+</van-cell-group>
+</view>
+</view>

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "登记",
+  "usingComponents": {
+    "van-cell-group": "/components/dist/cell-group/index",
+    "van-field": "/components/dist/field/index",
+    "van-divider": "/components/dist/divider/index",
+    "van-row": "/components/dist/row/index",
+    "van-col": "/components/dist/col/index"
+  }
+}

@@ -6,7 +6,8 @@
     "pages/bless/index",
     "pages/chat/index",
     "pages/poster/index",
-    "pages/navigation/index"
+    "pages/navigation/index",
+    "pages/bm/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -32,6 +33,12 @@
         "iconPath": "images/2-1.png",
         "selectedIconPath": "images/2-2.png",
         "text": "相册"
+      },
+      {
+        "pagePath": "pages/bm/index",
+        "iconPath": "images/5-1.png",
+        "selectedIconPath": "images/5-2.png",
+        "text": "登记"
       },
       {
         "pagePath": "pages/map/index",

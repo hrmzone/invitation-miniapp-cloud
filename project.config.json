@@ -32,7 +32,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -60,6 +60,12 @@
 					"name": "pages/bless/index",
 					"pathName": "pages/bless/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/bm/index",
+					"pathName": "pages/bm/index",
 					"scene": null
 				}
 			]
