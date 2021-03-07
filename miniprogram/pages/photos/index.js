@@ -66,6 +66,10 @@ Page({
       }
     }
   },
+  onShareTimeline: function(){
+
+
+  },
   previewImage: function(e) {
     var imgsurl = []
     var imgObj = this.data.slideList

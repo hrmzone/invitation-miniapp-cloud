@@ -130,6 +130,10 @@ Page({
       }
     }
   },
+  onShareTimeline: function(){
+
+
+  },
   callhe: function(event) {
     wx.makePhoneCall({
       phoneNumber: this.data.mainInfo.he_tel
