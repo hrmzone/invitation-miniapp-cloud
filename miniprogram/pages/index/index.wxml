@@ -1,4 +1,5 @@
 <!--pages/invitation/index.wxml-->
+<official-account></official-account>
 <view wx:if="{{music_url}}">
   <view wx:if="{{isPlayingMusic}}">
     <view class="background_music" bindtap="play">
